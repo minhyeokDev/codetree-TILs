@@ -6,20 +6,20 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        String str1 = "Leebros";
-        String str2 = "CodeTree";
-        String str3 = "BranchandBound";
+        String str1 = sc.next();
+        String str2 = sc.next();
+        String str3 = sc.next();
 
         int length1 = str1.length();
         int length2 = str2.length();
         int length3 = str3.length();
-
         List<Integer> list = new ArrayList<>();
         list.add(length1);
         list.add(length2);
         list.add(length3);
         int max = Collections.max(list);
         int min = Collections.min(list);
+
         System.out.println(max - min);
 
 
