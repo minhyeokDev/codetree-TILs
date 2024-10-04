@@ -22,6 +22,7 @@ public class Main {
         }
 
         int step = 0;
+        int cnt = 0;
 
         while (true) {
             step++;
@@ -40,8 +41,6 @@ public class Main {
             people[n - 1] = false;
             // 새로운 벨트가 왔으므로 여긴 무조건 사람이 없다.
             people[0] = false;
-
-            int cnt = 0;
 
             for (int i = n - 1; i > 0; i--) {
                 // 현재 칸에 사람이 있고 앞선 칸에 사람이 없다면
