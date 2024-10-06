@@ -7,7 +7,7 @@ public class Main {
     static int[][] map;
     static int[] dx = {-1, 0, 1, 0};
     static int[] dy = {0, 1, 0, -1};
-    static List<Pair> list = new ArrayList<>();
+    static List<Pair> list;
     static int count;
     static boolean[][] visited;
     static boolean isMove = false;
@@ -56,6 +56,7 @@ public class Main {
 
     public static void bfs(int x, int y) {
         Queue<Pair> q = new LinkedList<>();
+        list = new ArrayList<>();
         q.offer(new Pair(x, y));
         list.add(new Pair(x, y));
         visited[x][y] = true;
@@ -87,7 +88,7 @@ public class Main {
             Pair p = list.get(i);
             map[p.x][p.y] = sum / list.size();
         }
-        list.removeAll(list);
+        
     }
 
     public static void changePopulation(int sum) {
