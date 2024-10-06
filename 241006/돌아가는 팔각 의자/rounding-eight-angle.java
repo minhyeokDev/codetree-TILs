@@ -18,7 +18,6 @@ public class Main {
         for (int i = 0; i < 4; i++) {
             String str = br.readLine();
             for (int j = 0; j < 8; j++) {
-                //chair[i][j] =Integer.parseInt(String.valueOf(str.charAt(j)));
                 chair[i][j] = str.charAt(j) - '0';
             }
         }
@@ -48,7 +47,6 @@ public class Main {
     public static void checkDirection(int n) {
 
         // 좌측 회전 방향 검사
-
         for (int i = n - 1; i >= 0; i--) {
             if (chair[i][2] != chair[i + 1][6]) {
                 dir[i] = -dir[i + 1];
@@ -78,8 +76,8 @@ public class Main {
             if (dir[i] == 1) { // 시계 방향 회전
                 temp = chair[i][7];
 
-                for (int j = 0; j < 7; j++) {
-                    chair[i][j + 1] = chair[i][j];
+                for (int j = 7; j > 0; j--) {
+                    chair[i][j] = chair[i][j - 1];
                 }
                 chair[i][0] = temp;
             } else if (dir[i] == -1) { // 반시계 방향 회전
