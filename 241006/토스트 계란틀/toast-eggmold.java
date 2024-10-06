@@ -86,8 +86,8 @@ public class Main {
         for (int i = 0; i < list.size(); i++) {
             Pair p = list.get(i);
             map[p.x][p.y] = sum / list.size();
-
         }
+        list.removeAll(list);
     }
 
     public static void changePopulation(int sum) {
