@@ -65,9 +65,8 @@ public class Main {
         }
         // 네 방향 모두 방문했거나 인도인 경우에는
         // 뒤쪽 칸이 인도가 아니라는 전제 하에, 바라보는 방향을 유지한 채로 한 칸 후진.
-        int dir = (d + 2) % 4; // 반대 방향으로 후진
-        int bX = x + dx[dir];
-        int bY = y + dy[dir];
+        int bX = x - dx[d];
+        int bY = y - dy[d];
         if (bX >= 0 && bY >= 0 && bX < n && bY < m && map[bX][bY] != 1) {
             dfs(bX, bY, d); // 후진이니까 바라보는 방향은 유지
         }
