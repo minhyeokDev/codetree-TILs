@@ -44,7 +44,7 @@ public class Main {
         int nX = x + dx[d - 1];
         int nY = y + dy[d - 1];
 
-        if (nX < 0 || nY < 0 || nX >= n || nY > m) {
+        if (nX < 0 || nY < 0 || nX >= n || nY >= m) {
             return;
         }
         int temp = dice[5];
